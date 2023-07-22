@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arhum's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9dec2d8d31.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <nav>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="header-text">
+                <h1>Hi <span class="wave">👋</span>,
+                    I'm <span>Arhum</span>, <br>a <span>Software Engineer</span> from Atlanta, GA</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/LinkedIn pfp copy.png" alt="Arhum Khan">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p class="mydesc">Hey there! 👋 I'm Arhum Khan, a Computer Science student at Georgia Tech set to graduate in December 2023. 🎓 Software engineering is my passion, and I've been fortunate to gain hands-on experience through awesome internships and exciting projects! 💻 When I'm not immersed in coding, you can catch me shooting hoops on the basketball court 🏀 or having a blast hanging out with my amazing friends! 🎉 Let's create some incredible tech together and have a ton of fun along the way! 🚀😄</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education </p>
+                    </div>
+                   
+                    <div class="tab-contents active-tab" id="experience">
+                        <ul>
+                            <li><span>June 2023 - Current</span><br>Software Development at UnitedHealthcare</li>
+                            <li><span>August 2022 - May 2023</span><br>Software Development at GetInLine Inc.</li>
+                            <li><span>May 2022 - August 2022</span><br>Software Development at Delta Air Lines.</li>
+                            <li><span>September 2021 - December 2021</span><br>Researcher at Georgia Tech</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>December 2023</span><br>BS in Computer Science from Georgia Tech</li>
+                            <li><span>GPA</span><br>3.8</li>
+
+                            <li><span>Concentration</span><br>Intelligence and Human Computer Interaction</li>
+                            
+
+                            
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My Portfolio</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/tower-defense.png" alt="Tower Defense Game">
+                    <div class="layer">
+                        <h3>Tower Defense Game</h3>
+                        <p>Tower Defense game made in Flutter</p>
+                        <a href="#"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/messageboard.png" alt="Message Board">
+                    <div class="layer">
+                        <h3>Message Board</h3>
+                        <p>Interactive message board created in Java</p>
+                        <a href="#"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope" style="color: #B3A369;"></i>arhumk340@gmail.com</p>
+                    <p><i class="fa-solid fa-phone" style="color:#B3A369 ;"></i>6786432791</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/arhumk/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="mailto:arhumk340@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                    <a href="images/Arhums_Resume P copy.pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="Message" rows="6" placeholder="Type your message here"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &copy; Arhum</p>
+        </div>
+    </div>
+    
+    
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+
+</html>
